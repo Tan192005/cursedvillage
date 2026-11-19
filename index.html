@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brizuela 3D — Cursed Village: The 4 Totems (Official Trailer & Website)</title>
+  <style>
+    :root {
+      --bg-dark: #06070b;
+      --bg-card: #10131c;
+      --crimson: #e62e2e;
+      --crimson-glow: rgba(230, 46, 46, 0.38);
+      --gold: #f5b942;
+      --green: #2ecc71;
+      --text-main: #f0eee9;
+      --text-muted: #9da3b4;
+      --border: rgba(230, 46, 46, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Sticky Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 6%;
+      background: rgba(6, 7, 11, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--crimson);
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      margin-left: 1.6rem;
+      font-size: 0.94rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--crimson);
+    }
+
+    /* Hero Section */
+    header.hero {
+      position: relative;
+      padding: 4.8rem 6% 3.5rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(175, 22, 22, 0.28), rgba(6, 7, 11, 0.98) 72%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: rgba(230, 46, 46, 0.16);
+      border: 1px solid var(--crimson);
+      color: #ff6b6b;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 28px var(--crimson-glow);
+    }
+
+    h1 span {
+      color: var(--crimson);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.82rem 1.7rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-size: 0.98rem;
+      transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--crimson);
+      color: #fff;
+      box-shadow: 0 0 22px var(--crimson-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 32px rgba(230, 46, 46, 0.7);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #f5b942, #d98218);
+      color: #0b0c10;
+      box-shadow: 0 0 18px rgba(245, 185, 66, 0.35);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(245, 185, 66, 0.65);
+    }
+
+    .btn-outline {
+      background: rgba(16, 19, 28, 0.8);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--crimson);
+      color: var(--crimson);
+    }
+
+    /* Sections */
+    section {
+      padding: 3.8rem 6%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title span {
+      color: var(--crimson);
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+    }
+
+    /* OFFICIAL TRAILER THEATRE */
+    .trailer-shell {
+      background: linear-gradient(180deg, #121521 0%, #090b11 100%);
+      border: 2px solid var(--crimson);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 0 45px rgba(230, 46, 46, 0.24);
+    }
+
+    .trailer-tabs {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.85rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tab-group {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: #171b29;
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--crimson);
+      color: #fff;
+      border-color: var(--crimson);
+      box-shadow: 0 0 16px var(--crimson-glow);
+    }
+
+    .trailer-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 540px;
+      background: #020305;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    canvas#trailerCanvas,
+    video.trailer-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .trailer-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 0.9rem;
+      flex-wrap: wrap;
+      background: #0c0e16;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .scrubber {
+      flex: 1;
+      min-width: 160px;
+      accent-color: var(--crimson);
+      cursor: pointer;
+      height: 6px;
+    }
+
+    .chapter-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+
+    .chapter-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chapter-pill:hover,
+    .chapter-pill.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(245, 185, 66, 0.12);
+    }
+
+    /* Grid Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--crimson);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      background: rgba(230, 46, 46, 0.16);
+      color: #ff7b7b;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .stat-bar {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Interactive Mini-Game Preview */
+    .sim-wrapper {
+      background: var(--bg-card);
+      border: 2px solid var(--crimson);
+      border-radius: 14px;
+      padding: 1.2rem;
+      box-shadow: 0 0 35px rgba(230, 46, 46, 0.18);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    canvas#gameCanvas {
+      width: 100%;
+      height: 440px;
+      background: #050609;
+      border-radius: 8px;
+      display: block;
+      cursor: crosshair;
+    }
+
+    /* Controls Table */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .key-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+    }
+
+    kbd {
+      background: #1d2130;
+      border: 1px solid var(--crimson);
+      color: var(--gold);
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 6%;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🔥 Brizuela 3D</div>
+    <div class="nav-links">
+      <a href="#trailer">🎬 Official Trailer</a>
+      <a href="#play-demo">Interactive Preview</a>
+      <a href="#how-to-win">How to Win</a>
+      <a href="#monsters">Monsters</a>
+      <a href="#weapons">Weapons</a>
+      <a href="#controls">Controls</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="badge">Unity 6 • URP First-Person Survival Horror</div>
+    <h1>CURSED VILLAGE: <span>THE 4 TOTEMS</span></h1>
+    <p>
+      Four Cursed Totems have been scattered across the dark village and deep forest.
+      Approach each Totem and <strong>Hold [R] (Long Press)</strong> to burn it, fight off the
+      <strong>Aggressive Undead Horde &amp; Cursed Priest</strong>, and follow the Radar Signal to escape through the
+      <strong>Hidden Forest Exit Portal</strong>.
+    </p>
+    <div class="cta-group">
+      <a href="#trailer" class="btn btn-primary" onclick="startCinematicTrailer(true)">🎬 Watch Official Trailer</a>
+      <a href="#play-demo" class="btn btn-gold">▶ Play Browser Demo</a>
+      <a href="#how-to-win" class="btn btn-outline">Read Survival Guide</a>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- OFFICIAL GAME TRAILER SECTION                             -->
+  <!-- ========================================================= -->
+  <section id="trailer">
+    <h2 class="section-title">Official <span>Cinematic Game Trailer</span></h2>
+    <p class="section-sub">
+      Watch the <strong>Official 3D Cinematic Trailer</strong> with procedural horror soundtrack, flashlight sweeps, Long-Press <code>[R]</code> Totem burning, the Undead Horde, and the Hidden Exit Portal.
+    </p>
+
+    <div class="trailer-shell" id="trailerContainer">
+      <div class="trailer-tabs">
+        <div class="tab-group">
+          <button class="tab-btn active" id="tabBtn3D">🎬 Official 3D Cinematic Trailer</button>
+        </div>
+      </div>
+
+      <!-- OFFICIAL REAL-TIME 3D CINEMATIC HORROR TRAILER -->
+      <div class="trailer-viewport" id="viewport3D">
+        <canvas id="trailerCanvas" width="1280" height="720"></canvas>
+      </div>
+
+      <!-- 3D TRAILER CONTROLS & CHAPTERS -->
+      <div id="controls3D">
+        <div class="trailer-controls">
+          <button class="btn btn-primary" id="btnTrailerPlay" style="padding:0.48rem 1.15rem; font-size:0.88rem;" onclick="toggleTrailerPlay()">⏸ Pause</button>
+          <button class="btn btn-outline" id="btnTrailerAudio" style="padding:0.48rem 0.95rem; font-size:0.86rem;" onclick="toggleTrailerAudio()">🔊 Sound: ON</button>
+          <input type="range" id="trailerScrubber" class="scrubber" min="0" max="30" step="0.05" value="0" oninput="scrubTrailer(this.value)" />
+          <span id="trailerTimeLabel" style="font-weight:700; font-size:0.86rem; color:var(--gold); min-width:92px; text-align:right;">00:00 / 00:30</span>
+          <button class="btn btn-outline" style="padding:0.45rem 0.85rem; font-size:0.84rem;" onclick="fullscreenTrailer()">⛶ Fullscreen</button>
+        </div>
+
+        <div class="chapter-pills">
+          <span class="chapter-pill active" id="chap0" onclick="scrubTrailer(0)">0:00 • Act I: The Cursed Village</span>
+          <span class="chapter-pill" id="chap1" onclick="scrubTrailer(6)">0:06 • Act II: 4 Scattered Totems</span>
+          <span class="chapter-pill" id="chap2" onclick="scrubTrailer(12)">0:12 • Act III: Hold [R] to Burn Totem</span>
+          <span class="chapter-pill" id="chap3" onclick="scrubTrailer(18)">0:18 • Act IV: Aggressive Undead Horde</span>
+          <span class="chapter-pill" id="chap4" onclick="scrubTrailer(24)">0:24 • Act V: Hidden Forest Exit Portal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MINI-SIMULATOR -->
+  <section id="play-demo">
+    <h2 class="section-title">Interactive <span>Ritual Survival Preview</span></h2>
+    <p class="section-sub">
+      Test the updated mechanics right here: Move with <strong>WASD</strong>, aim your Flashlight with the <strong>Mouse</strong>,
+      approach the 4 scattered Totems (hidden until you get close!), <strong>Hold [R] for 2 seconds</strong> to charge and burn them,
+      fight off the <strong>Aggressive Zombies</strong> with <strong>Left Click</strong> (switch weapons with <strong>1–4</strong>), and escape through the <strong>Hidden Forest Exit Portal</strong>!
+    </p>
+
+    <div class="sim-wrapper">
+      <div class="sim-header">
+        <div>
+          <strong id="simStatus" style="color: var(--gold);">CURSED RITUAL • TOTEMS BURNED: 0 / 4 (Hold [R] near a Totem)</strong>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="btn btn-outline" style="padding:0.4rem 0.9rem; font-size:0.85rem;" onclick="resetSim()">↺ Reset Demo</button>
+        </div>
+      </div>
+      <canvas id="gameCanvas" width="1100" height="440"></canvas>
+    </div>
+  </section>
+
+  <!-- HOW TO WIN (STEP BY STEP) -->
+  <section id="how-to-win">
+    <h2 class="section-title">How to Play &amp; <span>Win (Step-by-Step)</span></h2>
+    <p class="section-sub">Updated hardcore survival horror loop built into your Unity 6 project.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="card-tag">Step 1 • Explore the 4 Quadrants</span>
+        <h3>Find the 4 Scattered Totems</h3>
+        <p>
+          No yellow guide lines or far-away sky beams—explore the dark village and forest using your wide flashlight and radar.
+          A Cursed Totem's label only reveals itself when you are within <strong>7 meters</strong>!
+        </p>
+        <div class="stat-bar">Locations: NW Blacksmith • SW Forest Cabin • SE River Woods • NE Deep Woods</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Step 2 • Hold [R] (Long Press)</span>
+        <h3>2-Second Ritual Burn Activation</h3>
+        <p>
+          Stand close to a Cursed Totem and <strong>Hold [R] for 2.0 seconds</strong>. The totem shakes and levitates while the charging bar fills to 100%, then explodes into orange purifying flames!
+        </p>
+        <div class="stat-bar">Long Press [R]: 2.0s Charging Bar + Ritual Levitation</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Step 3 • Watch the Warning</span>
+        <h3>Zombies Warn Before Attacking</h3>
+        <p>
+          When a zombie spots you (28m), it stops, turns, and growls with a <strong>2.5s ⚠ ATTACKING IN…</strong> countdown before it charges. Their HP bars only appear when they are close (<strong>&le; 8m</strong>). Use your 4 melee weapons to fight back!
+        </p>
+        <div class="stat-bar">2.5s Warning • 0.7s Wind-up • 1.2s Attack Cooldown</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Step 4 • Follow the Radar Signal</span>
+        <h3>Escape Through the Hidden Portal</h3>
+        <p>
+          Burning all <strong>4 / 4 Totems</strong> unlocks a <strong>Hidden Exit Portal</strong> in one of the deep forest corners. Follow the <strong>Hot / Cold Radar Signal</strong> at the top of your screen to find it and trigger <strong>🏆 GAME SUCCESS!</strong>
+        </p>
+        <div class="stat-bar">Radar Signal: ❄ COLD → ♨ WARM → 🔥 HOT → ★ PORTAL VISIBLE!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONSTERS BESTIARY -->
+  <section id="monsters">
+    <h2 class="section-title">Horror Monsters &amp; <span>Aggressive 6-State AI</span></h2>
+    <p class="section-sub">Close-range 2D overhead Health Bars (&le; 8m) and full 6-state procedural animations.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="card-tag">Boss Cultist</span>
+        <h3>The Cursed Priest</h3>
+        <p>
+          Guards the dark village entrance and ritual perimeter in blood-stained ceremonial vestments. Immediately charges intruders on sight.
+        </p>
+        <div class="stat-bar">HP: 3000 / 3000 • Aggressive Chase &amp; 3 Melee Attack Variants</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Abomination</span>
+        <h3>Book-Head Monster</h3>
+        <p>
+          A grotesque pale-boned creature with a split tome-skull head and long blood-soaked claws lurking near the North-East woods.
+        </p>
+        <div class="stat-bar">HP: 2200 / 2200 • Jaw &amp; Claw Slash Animation Events</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Ritual Effigy</span>
+        <h3>Creepy Pumpkin / Scarecrow</h3>
+        <p>
+          Towering stitched scarecrow with glowing eyes beneath a tattered straw hat and writhing crimson back tentacles guarding the North Bridge.
+        </p>
+        <div class="stat-bar">HP: 2200 / 2200 • Relentless 0.9s Melee Slashes</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Undead Horde</span>
+        <h3>Village Zombies (ZombieMale_AAB)</h3>
+        <p>
+          Animated with the exact 6-state video posture: hunched asymmetric idle, limping shamble walk, aggressive crouched sprint, 3 melee slashes/overhead smash, hit flinches, and kneeling face-plant death.
+        </p>
+        <div class="stat-bar">HP: 1500 / 1500 • Instant Aggro Within 28m</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEAPONS ARSENAL -->
+  <section id="weapons">
+    <h2 class="section-title">Imported <span>Weapons Arsenal</span></h2>
+    <p class="section-sub">Switch anytime using keys <strong>1, 2, 3, 4</strong> or visit the glowing Weapon Rack near spawn.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="card-tag">Hotkey [1] • Auto-Equipped</span>
+        <h3>Hunter's Axe</h3>
+        <p>Heavy bushcraft chopping axe from <em>ArtisticMechanics</em>. High cleave damage and knockback stagger force.</p>
+        <div class="stat-bar">Damage: 550 HP • Reach: 2.8m</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Hotkey [2] • Fast Melee</span>
+        <h3>Survival Knife</h3>
+        <p>Razor-sharp bushcraft survival blade for quick close-quarters slashes.</p>
+        <div class="stat-bar">Damage: 400 HP • Reach: 2.3m</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Hotkey [3] • Long Reach</span>
+        <h3>Hunting Spear</h3>
+        <p>Sharpened straight-point wooden spear allowing you to strike aggressive zombies from a safer distance.</p>
+        <div class="stat-bar">Damage: 650 HP • Reach: 3.6m</div>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Hotkey [4] • Heavy Cleaver</span>
+        <h3>Medieval Battle Axe</h3>
+        <p>Heavy iron battle axe from <em>ZNS3D Medieval Pack</em> with maximum single-strike impact.</p>
+        <div class="stat-bar">Damage: 850 HP • Reach: 3.0m</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section id="controls">
+    <h2 class="section-title">Game <span>Controls</span></h2>
+    <p class="section-sub">Accessible anytime on the in-game Starting Menu screen.</p>
+
+    <div class="controls-grid">
+      <div class="key-box"><kbd>WASD</kbd><span>Move / Strafe</span></div>
+      <div class="key-box"><kbd>Shift</kbd><span>Sprint</span></div>
+      <div class="key-box"><kbd>Hold R</kbd><span>Burn Cursed Totem (2.0s)</span></div>
+      <div class="key-box"><kbd>L-Click</kbd><span>Swing Equipped Weapon</span></div>
+      <div class="key-box"><kbd>F</kbd><span>Toggle Wide Flashlight (88°)</span></div>
+      <div class="key-box"><kbd>1 - 4</kbd><span>Switch Equipped Weapon</span></div>
+      <div class="key-box"><kbd>V</kbd><span>Switch FPS / TPS Camera</span></div>
+      <div class="key-box"><kbd>T</kbd><span>Watch In-Game Trailer</span></div>
+    </div>
+  </section>
+
+  <footer>
+    Brizuela 3D • Unity 6 URP Horror Survival Project • "Cursed Village: The 4 Totems"
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- 1. REAL-TIME 3D CINEMATIC HORROR TRAILER ENGINE           -->
+  <!-- ========================================================= -->
+  <script>
+    const tCanvas = document.getElementById('trailerCanvas');
+    const tCtx = tCanvas.getContext('2d');
+    const scrubber = document.getElementById('trailerScrubber');
+    const timeLabel = document.getElementById('trailerTimeLabel');
+    const btnPlay = document.getElementById('btnTrailerPlay');
+    const btnAudio = document.getElementById('btnTrailerAudio');
+
+    let trailerPlaying = true;
+    let trailerTime = 0;
+    const TRAILER_DURATION = 30;
+    let audioEnabled = false;
+    let audioCtx = null;
+    let lastBeatTime = -1;
+    let lastChapterIdx = -1;
+
+    // 3D Forest Trees & Environment objects for perspective projection
+    const forestTrees = [];
+    for (let i = 0; i < 65; i++) {
+      forestTrees.push({
+        x: (Math.random() - 0.5) * 44,
+        z: 4 + Math.random() * 45,
+        w: 0.7 + Math.random() * 0.9,
+        h: 7 + Math.random() * 6,
+        seed: Math.random() * 100
+      });
+    }
+    forestTrees.sort((a, b) => b.z - a.z);
+
+    // Floating ember particles
+    const embers = [];
+    for (let i = 0; i < 55; i++) {
+      embers.push({
+        x: Math.random() * 1280,
+        y: Math.random() * 720,
+        r: 1.2 + Math.random() * 2.8,
+        vx: -18 + Math.random() * 36,
+        vy: -25 - Math.random() * 45,
+        alpha: 0.3 + Math.random() * 0.7
+      });
+    }
+
+    const chapters = [
+      {
+        start: 0, end: 6,
+        title: "CURSED VILLAGE",
+        subtitle: "DEEP IN THE FORGOTTEN FOREST AT MIDNIGHT...",
+        hudTop: "CURSED RITUAL • TOTEMS BURNED: 0 / 4",
+        hudSub: "• Explore the dark village & forest to find and burn the 4 Cursed Totems (Hold [R] when close)!"
+      },
+      {
+        start: 6, end: 12,
+        title: "4 SCATTERED TOTEMS",
+        subtitle: "HIDDEN IN THE DARKNESS • ONLY REVEALED UP CLOSE",
+        hudTop: "CURSED RITUAL • TOTEMS BURNED: 1 / 4",
+        hudSub: "• Totem UI only appears within 7m — No sky beams, no yellow guide lines!"
+      },
+      {
+        start: 12, end: 18,
+        title: "HOLD [R] TO BURN",
+        subtitle: "LONG-PRESS [R] FOR 2.0 SECONDS TO SHATTER THE CURSE",
+        hudTop: "🔥 CHARGING RITUAL TOTEM... 100% — TOTEM BURNED!",
+        hudSub: "• Hold [R] (2.0s) while close to levitate and incinerate each Cursed Totem!"
+      },
+      {
+        start: 18, end: 24,
+        title: "SURVIVE THE NIGHT",
+        subtitle: "THE AGGRESSIVE UNDEAD HORDE ATTACKS ON SIGHT",
+        hudTop: "⚔ EQUIPPED: HUNTER'S AXE [1-4] • AGGRESSIVE ZOMBIES INCOMING!",
+        hudSub: "• Zombies roar and immediately charge at 4.6 m/s! Swing your melee weapons to survive!"
+      },
+      {
+        start: 24, end: 30,
+        title: "FIND THE HIDDEN PORTAL",
+        subtitle: "FOLLOW THE RADAR SIGNAL • ESCAPE FOR GAME SUCCESS",
+        hudTop: "★ EXIT PORTAL VISIBLE (5m)! Walk into the Green Portal to Finish the Game!",
+        hudSub: "🏆 GAME SUCCESS! You escaped through the Hidden Forest Portal!"
+      }
+    ];
+
+    function ensureAudio() {
+      if (!audioCtx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) audioCtx = new AC();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    }
+
+    function playCinematicBoom(freq = 62, dur = 1.4) {
+      if (!audioEnabled || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(freq, now);
+      osc.frequency.exponentialRampToValueAtTime(24, now + dur);
+      gain.gain.setValueAtTime(0.22, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + dur);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + dur);
+    }
+
+    function playHeartbeatThump() {
+      if (!audioEnabled || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(52, now);
+      osc.frequency.exponentialRampToValueAtTime(28, now + 0.16);
+      gain.gain.setValueAtTime(0.18, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + 0.19);
+    }
+
+    function toggleTrailerAudio() {
+      ensureAudio();
+      audioEnabled = !audioEnabled;
+      btnAudio.textContent = audioEnabled ? '🔊 Sound: ON' : '🔇 Sound: OFF';
+      if (audioEnabled) playCinematicBoom(75, 1.2);
+    }
+
+    function startCinematicTrailer(withSound) {
+      switchTrailerTab('3d');
+      trailerPlaying = true;
+      trailerTime = 0;
+      btnPlay.textContent = '⏸ Pause';
+      if (withSound) {
+        ensureAudio();
+        audioEnabled = true;
+        btnAudio.textContent = '🔊 Sound: ON';
+        playCinematicBoom(70, 1.5);
+      }
+    }
+
+    function toggleTrailerPlay() {
+      trailerPlaying = !trailerPlaying;
+      btnPlay.textContent = trailerPlaying ? '⏸ Pause' : '▶ Play';
+    }
+
+    function scrubTrailer(val) {
+      trailerTime = parseFloat(val);
+      updateChapterHighlight(Math.min(4, Math.floor(trailerTime / 6)));
+    }
+
+    function fullscreenTrailer() {
+      const el = document.getElementById('trailerContainer');
+      if (!document.fullscreenElement) el.requestFullscreen().catch(() => {});
+      else document.exitFullscreen();
+    }
+
+    function switchTrailerTab(tab) {
+      trailerPlaying = true;
+      btnPlay.textContent = '⏸ Pause';
+    }
+
+    function updateChapterHighlight(idx) {
+      for (let i = 0; i < 5; i++) {
+        const el = document.getElementById('chap' + i);
+        if (el) el.classList.toggle('active', i === idx);
+      }
+    }
+
+    function formatTime(sec) {
+      const s = Math.floor(sec);
+      return `00:${s < 10 ? '0' + s : s}`;
+    }
+
+    // Main 3D Perspective Cinematic Render Loop
+    let lastFrame = performance.now();
+    function renderTrailer(now) {
+      const dt = Math.min(0.05, (now - lastFrame) / 1000);
+      lastFrame = now;
+
+      if (trailerPlaying) {
+        trailerTime += dt;
+        if (trailerTime >= TRAILER_DURATION) trailerTime = 0;
+        scrubber.value = trailerTime;
+      }
+      timeLabel.textContent = `${formatTime(trailerTime)} / 00:30`;
+
+      const chapIdx = Math.min(4, Math.floor(trailerTime / 6));
+      if (chapIdx !== lastChapterIdx) {
+        lastChapterIdx = chapIdx;
+        updateChapterHighlight(chapIdx);
+        playCinematicBoom(65 + chapIdx * 8, 1.3);
+      }
+
+      if (trailerPlaying && Math.floor(trailerTime * 1.6) !== lastBeatTime) {
+        lastBeatTime = Math.floor(trailerTime * 1.6);
+        playHeartbeatThump();
+      }
+
+      const chap = chapters[chapIdx];
+      const localT = (trailerTime - chap.start) / 6; // 0..1 inside current 6s chapter
+      const W = tCanvas.width;
+      const H = tCanvas.height;
+
+      // 1. Night Sky & Blood Moon Gradient
+      const skyGrad = tCtx.createLinearGradient(0, 0, 0, H * 0.58);
+      if (chapIdx === 4) {
+        skyGrad.addColorStop(0, '#04130a');
+        skyGrad.addColorStop(1, '#092414');
+      } else if (chapIdx >= 2) {
+        skyGrad.addColorStop(0, '#180507');
+        skyGrad.addColorStop(1, '#090b12');
+      } else {
+        skyGrad.addColorStop(0, '#050811');
+        skyGrad.addColorStop(1, '#0c1322');
+      }
+      tCtx.fillStyle = skyGrad;
+      tCtx.fillRect(0, 0, W, H);
+
+      // Eerie Blood Moon in top right
+      const moonX = W * 0.78 - localT * 35;
+      const moonY = H * 0.22;
+      const moonGrad = tCtx.createRadialGradient(moonX, moonY, 8, moonX, moonY, 110);
+      moonGrad.addColorStop(0, chapIdx === 4 ? 'rgba(80, 255, 140, 0.55)' : 'rgba(235, 55, 55, 0.55)');
+      moonGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      tCtx.fillStyle = moonGrad;
+      tCtx.beginPath();
+      tCtx.arc(moonX, moonY, 110, 0, Math.PI * 2);
+      tCtx.fill();
+
+      // 2. Ground Plane with Foggy Horizon
+      const horizonY = H * 0.53 + Math.sin(trailerTime * 1.8) * 6;
+      const groundGrad = tCtx.createLinearGradient(0, horizonY, 0, H);
+      groundGrad.addColorStop(0, '#07090e');
+      groundGrad.addColorStop(1, '#030406');
+      tCtx.fillStyle = groundGrad;
+      tCtx.fillRect(0, horizonY, W, H - horizonY);
+
+      // Camera forward motion offset
+      const camZ = (trailerTime * 3.8) % 40;
+      const camX = Math.sin(trailerTime * 0.85) * 2.2;
+
+      // 3. Draw 3D Perspective Forest Trees & Village Silhouette
+      for (const tree of forestTrees) {
+        let rz = tree.z - camZ;
+        if (rz < 1.2) rz += 40;
+        const scale = 320 / rz;
+        const sx = W * 0.5 + (tree.x - camX) * scale;
+        const sy = horizonY + 1.8 * scale;
+        const tw = tree.w * scale;
+        const th = tree.h * scale;
+
+        if (sx < -200 || sx > W + 200) continue;
+        const fog = Math.max(0.08, Math.min(0.92, 1 - rz / 42));
+
+        // Trunk
+        tCtx.fillStyle = `rgba(12, 15, 22, ${fog})`;
+        tCtx.fillRect(sx - tw * 0.22, sy - th, tw * 0.44, th);
+
+        // Dark crimson/pine foliage layers
+        tCtx.fillStyle = `rgba(${chapIdx >= 2 ? 38 : 16}, 18, 24, ${fog * 0.95})`;
+        for (let layer = 0; layer < 3; layer++) {
+          const ly = sy - th * (0.45 + layer * 0.22);
+          const lw = tw * (2.2 - layer * 0.45);
+          tCtx.beginPath();
+          tCtx.moveTo(sx, ly - th * 0.32);
+          tCtx.lineTo(sx - lw, ly);
+          tCtx.lineTo(sx + lw, ly);
+          tCtx.closePath();
+          tCtx.fill();
+        }
+      }
+
+      // 4. Scene-Specific 3D Focal Objects
+      if (chapIdx === 0) {
+        // Act I: Dark Village Manor & Archway (inspired by "FLOODED GROUNDS" shot)
+        const manorScale = 1 + localT * 0.22;
+        const mx = W * 0.5;
+        const my = horizonY + 18;
+        tCtx.save();
+        tCtx.translate(mx, my);
+        tCtx.scale(manorScale, manorScale);
+
+        // Manor silhouette
+        tCtx.fillStyle = '#0b0e15';
+        tCtx.fillRect(-190, -145, 380, 145);
+        tCtx.beginPath();
+        tCtx.moveTo(-210, -145);
+        tCtx.lineTo(0, -215);
+        tCtx.lineTo(210, -145);
+        tCtx.closePath();
+        tCtx.fill();
+
+        // Glowing cursed windows
+        tCtx.fillStyle = 'rgba(235, 65, 45, 0.75)';
+        for (let wx = -135; wx <= 135; wx += 54) {
+          tCtx.fillRect(wx - 10, -115, 20, 34);
+          tCtx.fillRect(wx - 10, -58, 20, 34);
+        }
+
+        // Front Stone Archway
+        tCtx.strokeStyle = '#181d2a';
+        tCtx.lineWidth = 14;
+        tCtx.beginPath();
+        tCtx.arc(0, 0, 68, Math.PI, 0);
+        tCtx.stroke();
+        tCtx.restore();
+      } else if (chapIdx === 1 || chapIdx === 2) {
+        // Act II & III: Glowing Red Cursed Totem + Long-Press [R] 2.0s Charging Ritual
+        const isCharging = chapIdx === 2;
+        const chargeRatio = isCharging ? Math.min(1, localT / 0.72) : 0;
+        const isBurnedNow = isCharging && localT >= 0.72;
+        const shakeX = (isCharging && !isBurnedNow) ? Math.sin(trailerTime * 48) * 6 * chargeRatio : 0;
+        const liftY = (isCharging && !isBurnedNow) ? -chargeRatio * 34 : 0;
+
+        const tx = W * 0.5 + shakeX;
+        const ty = horizonY + 85 + liftY;
+
+        // Totem Aura
+        const auraGrad = tCtx.createRadialGradient(tx, ty - 75, 10, tx, ty - 75, 175);
+        if (isBurnedNow) {
+          auraGrad.addColorStop(0, 'rgba(255, 165, 35, 0.85)');
+          auraGrad.addColorStop(1, 'rgba(255, 80, 10, 0)');
+        } else {
+          auraGrad.addColorStop(0, 'rgba(235, 30, 30, 0.75)');
+          auraGrad.addColorStop(1, 'rgba(235, 30, 30, 0)');
+        }
+        tCtx.fillStyle = auraGrad;
+        tCtx.beginPath();
+        tCtx.arc(tx, ty - 75, 175, 0, Math.PI * 2);
+        tCtx.fill();
+
+        // Totem Pillar & Crossbars
+        tCtx.fillStyle = isBurnedNow ? '#ff9922' : '#d92626';
+        tCtx.fillRect(tx - 18, ty - 155, 36, 155);
+        tCtx.fillRect(tx - 58, ty - 120, 116, 18);
+        tCtx.fillRect(tx - 44, ty - 78, 88, 15);
+        tCtx.beginPath();
+        tCtx.arc(tx, ty - 172, 26, 0, Math.PI * 2);
+        tCtx.fill();
+
+        // Close-Range 2D Totem UI & Hold [R] Charging Bar
+        const uiY = ty - 245;
+        tCtx.fillStyle = 'rgba(15, 4, 4, 0.92)';
+        tCtx.fillRect(tx - 165, uiY, 330, 56);
+        tCtx.strokeStyle = isBurnedNow ? '#2ecc71' : '#f5b942';
+        tCtx.lineWidth = 2;
+        tCtx.strokeRect(tx - 165, uiY, 330, 56);
+
+        if (isCharging && !isBurnedNow) {
+          tCtx.fillStyle = 'rgba(255, 145, 25, 0.92)';
+          tCtx.fillRect(tx - 161, uiY + 4, 322 * chargeRatio, 48);
+        }
+
+        tCtx.fillStyle = '#fff';
+        tCtx.font = 'bold 14px Segoe UI';
+        tCtx.textAlign = 'center';
+        const label1 = isBurnedNow
+          ? '✓ CURSED TOTEM BURNED! (2 / 4)'
+          : (isCharging ? `🔥 BURNING TOTEM... ${Math.round(chargeRatio * 100)}%` : '♦ CURSED TOTEM: North-West Blacksmith (4m)');
+        const label2 = isBurnedNow
+          ? 'Purification Fire Ignited!'
+          : (isCharging ? 'KEEP HOLDING [R]!' : 'HOLD [R] (2s Long Press) to Activate & Burn');
+        tCtx.fillText(label1, tx, uiY + 23);
+        tCtx.fillStyle = '#ffd966';
+        tCtx.fillText(label2, tx, uiY + 44);
+      } else if (chapIdx === 3) {
+        // Act IV: Aggressive Undead Horde & Cursed Priest Charging + Close-Range 8m HP Bars
+        const monsters3D = [
+          { name: 'CURSED PRIEST (BOSS)', hp: 2450, maxHp: 3000, xOff: 0, scale: 1.25, color: '#8f1d1d' },
+          { name: 'ZOMBIE TITAN', hp: 1100, maxHp: 1500, xOff: -240, scale: 0.95, color: '#3b4d3b' },
+          { name: 'SCARECROW MONSTER', hp: 1850, maxHp: 2200, xOff: 245, scale: 1.0, color: '#704214' }
+        ];
+
+        for (const m of monsters3D) {
+          const rushScale = m.scale * (0.85 + localT * 0.42);
+          const bob = Math.abs(Math.sin(trailerTime * 9.5 + m.xOff)) * 14;
+          const mx = W * 0.5 + m.xOff * (0.85 + localT * 0.25);
+          const my = horizonY + 115 + bob;
+
+          tCtx.save();
+          tCtx.translate(mx, my);
+          tCtx.scale(rushScale, rushScale);
+
+          // Hunched Zombie / Priest Silhouette
+          tCtx.fillStyle = m.color;
+          tCtx.fillRect(-26, -125, 52, 85); // Torso
+          tCtx.beginPath();
+          tCtx.arc(0, -144, 22, 0, Math.PI * 2); // Head
+          tCtx.fill();
+
+          // Glowing red aggressive eyes
+          tCtx.fillStyle = '#ff2a2a';
+          tCtx.beginPath();
+          tCtx.arc(-8, -146, 3.5, 0, Math.PI * 2);
+          tCtx.arc(8, -146, 3.5, 0, Math.PI * 2);
+          tCtx.fill();
+
+          // Lunging slash arms
+          const slash = Math.sin(trailerTime * 11) * 24;
+          tCtx.strokeStyle = m.color;
+          tCtx.lineWidth = 13;
+          tCtx.beginPath();
+          tCtx.moveTo(-24, -115);
+          tCtx.lineTo(-55, -75 + slash);
+          tCtx.moveTo(24, -115);
+          tCtx.lineTo(55, -75 - slash);
+          tCtx.stroke();
+          tCtx.restore();
+
+          // Close-Range 2D Zombie Health Bar (only shown within 8m, no 3D overlapping text!)
+          const barW = 156, barH = 20;
+          const bx = mx - barW / 2;
+          const by = my - 190 * rushScale;
+          tCtx.fillStyle = 'rgba(15, 3, 3, 0.94)';
+          tCtx.fillRect(bx - 2, by - 20, barW + 4, barH + 22);
+          tCtx.fillStyle = '#eb2424';
+          tCtx.fillRect(bx, by, barW * (m.hp / m.maxHp), barH);
+          tCtx.fillStyle = '#fff';
+          tCtx.font = 'bold 12px Segoe UI';
+          tCtx.textAlign = 'center';
+          tCtx.fillText(m.name, mx, by - 5);
+          tCtx.fillText(`♥ HP: ${m.hp} / ${m.maxHp}`, mx, by + 15);
+        }
+
+        // First-Person Hunter's Axe Viewmodel in Bottom-Right
+        const swing = Math.sin(localT * Math.PI * 6) * 0.45;
+        tCtx.save();
+        tCtx.translate(W * 0.78, H * 0.82);
+        tCtx.rotate(-0.35 + swing);
+        tCtx.fillStyle = '#6b4423';
+        tCtx.fillRect(-12, -160, 22, 180);
+        tCtx.fillStyle = '#d0d7e1';
+        tCtx.beginPath();
+        tCtx.moveTo(0, -155);
+        tCtx.lineTo(78, -185);
+        tCtx.lineTo(68, -105);
+        tCtx.closePath();
+        tCtx.fill();
+        tCtx.restore();
+      } else if (chapIdx === 4) {
+        // Act V: Hidden Deep-Forest Exit Portal & GAME SUCCESS!
+        const px = W * 0.5;
+        const py = horizonY + 95;
+        const pScale = 0.9 + localT * 0.35;
+
+        tCtx.save();
+        tCtx.translate(px, py);
+        tCtx.scale(pScale, pScale);
+
+        const portalGlow = tCtx.createRadialGradient(0, -90, 12, 0, -90, 190);
+        portalGlow.addColorStop(0, 'rgba(46, 255, 130, 0.92)');
+        portalGlow.addColorStop(0.5, 'rgba(20, 180, 80, 0.38)');
+        portalGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        tCtx.fillStyle = portalGlow;
+        tCtx.beginPath();
+        tCtx.arc(0, -90, 190, 0, Math.PI * 2);
+        tCtx.fill();
+
+        // Glowing Emerald Archway Pillars
+        tCtx.fillStyle = '#1f4d32';
+        tCtx.fillRect(-75, -180, 24, 180);
+        tCtx.fillRect(51, -180, 24, 180);
+        tCtx.fillRect(-88, -198, 176, 24);
+
+        tCtx.fillStyle = 'rgba(65, 255, 145, 0.78)';
+        tCtx.fillRect(-51, -174, 102, 174);
+        tCtx.restore();
+
+        // Close-range Exit Portal prompt
+        tCtx.fillStyle = 'rgba(4, 30, 12, 0.94)';
+        tCtx.fillRect(px - 145, py - 255, 290, 46);
+        tCtx.strokeStyle = '#2ecc71';
+        tCtx.strokeRect(px - 145, py - 255, 290, 46);
+        tCtx.fillStyle = '#4dff88';
+        tCtx.font = 'bold 14px Segoe UI';
+        tCtx.textAlign = 'center';
+        tCtx.fillText('★ EXIT PORTAL (GAME FINISH) ★', px, py - 234);
+        tCtx.fillStyle = '#fff';
+        tCtx.fillText('Walk Inside to Escape! (4m)', px, py - 216);
+      }
+
+      // 5. Dynamic Wide Flashlight Sweep (88° Cone)
+      const beamX = W * 0.5 + Math.sin(trailerTime * 2.1) * 180;
+      const beamY = H * 0.54 + Math.cos(trailerTime * 1.5) * 45;
+      const flashGrad = tCtx.createRadialGradient(beamX, beamY, 15, beamX, beamY, 370);
+      flashGrad.addColorStop(0, 'rgba(255, 250, 230, 0.24)');
+      flashGrad.addColorStop(0.6, 'rgba(255, 245, 215, 0.08)');
+      flashGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      tCtx.fillStyle = flashGrad;
+      tCtx.fillRect(0, 0, W, H);
+
+      // 6. Floating Red/Gold Horror Embers
+      for (const e of embers) {
+        e.x += e.vx * dt;
+        e.y += e.vy * dt;
+        if (e.y < 0) { e.y = H; e.x = Math.random() * W; }
+        if (e.x < 0) e.x = W;
+        if (e.x > W) e.x = 0;
+
+        tCtx.fillStyle = chapIdx === 4
+          ? `rgba(80, 255, 150, ${e.alpha})`
+          : `rgba(255, 110, 45, ${e.alpha})`;
+        tCtx.beginPath();
+        tCtx.arc(e.x, e.y, e.r, 0, Math.PI * 2);
+        tCtx.fill();
+      }
+
+      // 7. In-Game HUD Preview Overlay (Top Banner, Bottom-Left Titan HP, Top-Right Radar)
+      // Bottom-Left Player HP Bar (inset 60px from left edge)
+      tCtx.fillStyle = 'rgba(10, 14, 22, 0.92)';
+      tCtx.fillRect(42, H - 155, 265, 74);
+      tCtx.strokeStyle = '#2ecc71';
+      tCtx.lineWidth = 2;
+      tCtx.strokeRect(42, H - 155, 265, 74);
+      tCtx.fillStyle = '#2ecc71';
+      tCtx.font = 'bold 12px Segoe UI';
+      tCtx.textAlign = 'left';
+      tCtx.fillText('🛡 PLAYER TITAN LIFE (AUTO-REGEN)', 52, H - 137);
+      tCtx.fillStyle = '#240606';
+      tCtx.fillRect(52, H - 130, 245, 22);
+      tCtx.fillStyle = '#2ecc71';
+      tCtx.fillRect(52, H - 130, 238, 22);
+      tCtx.fillStyle = '#fff';
+      tCtx.textAlign = 'center';
+      tCtx.fillText('♥ HP: 2450 / 2500 (98%)', 174, H - 114);
+      tCtx.fillStyle = '#f5b942';
+      tCtx.textAlign = 'left';
+      tCtx.fillText("⚔ WEAPON: Hunter's Axe [1-4]", 52, H - 91);
+
+      // 8. Widescreen Cinema Letterbox Bars (Top & Bottom)
+      const barH = 68;
+      tCtx.fillStyle = 'rgba(0, 0, 0, 0.95)';
+      tCtx.fillRect(0, 0, W, barH);
+      tCtx.fillRect(0, H - barH, W, barH);
+
+      // Top HUD Objective inside Letterbox
+      tCtx.fillStyle = chapIdx === 4 ? '#2ecc71' : '#f5b942';
+      tCtx.font = 'bold 15px Segoe UI';
+      tCtx.textAlign = 'center';
+      tCtx.fillText(chap.hudTop, W * 0.5, 28);
+      tCtx.fillStyle = '#d5dbe8';
+      tCtx.font = '13px Segoe UI';
+      tCtx.fillText(chap.hudSub, W * 0.5, 50);
+
+      // 9. Dramatic Metallic Center Title Card (Typewriter Letter Reveal + Fade)
+      let cardAlpha = 1;
+      if (localT < 0.12) cardAlpha = localT / 0.12;
+      else if (localT > 0.78) cardAlpha = Math.max(0, 1 - (localT - 0.78) / 0.22);
+
+      if (cardAlpha > 0.02) {
+        tCtx.save();
+        tCtx.globalAlpha = cardAlpha;
+        const charCount = Math.max(1, Math.min(chap.title.length, Math.floor((localT / 0.38) * chap.title.length)));
+        const shownTitle = chap.title.substring(0, charCount);
+
+        tCtx.font = '900 54px Segoe UI';
+        tCtx.textAlign = 'center';
+        tCtx.shadowColor = 'rgba(230, 46, 46, 0.75)';
+        tCtx.shadowBlur = 24;
+        tCtx.fillStyle = '#f2f5fa';
+        tCtx.fillText(shownTitle, W * 0.5, H * 0.45);
+
+        tCtx.shadowBlur = 10;
+        tCtx.font = 'bold 18px Segoe UI';
+        tCtx.fillStyle = chapIdx === 4 ? '#4dff88' : '#ff7b6b';
+        tCtx.fillText(chap.subtitle, W * 0.5, H * 0.45 + 36);
+        tCtx.restore();
+      }
+
+      // Smooth fade transition between shots
+      let fadeBlack = 0;
+      if (localT < 0.08) fadeBlack = 1 - localT / 0.08;
+      else if (localT > 0.92) fadeBlack = (localT - 0.92) / 0.08;
+      if (fadeBlack > 0.01) {
+        tCtx.fillStyle = `rgba(0, 0, 0, ${fadeBlack * 0.85})`;
+        tCtx.fillRect(0, 0, W, H);
+      }
+
+      requestAnimationFrame(renderTrailer);
+    }
+    requestAnimationFrame(renderTrailer);
+  </script>
+
+  <!-- ========================================================= -->
+  <!-- 2. INTERACTIVE 2D RITUAL SURVIVAL SIMULATOR SCRIPT        -->
+  <!-- ========================================================= -->
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const statusEl = document.getElementById('simStatus');
+
+    const keys = {};
+    window.addEventListener('keydown', e => {
+      keys[e.key.toLowerCase()] = true;
+      if (['1','2','3','4'].includes(e.key)) player.weaponIdx = parseInt(e.key) - 1;
+      if (e.key.toLowerCase() === 'f') player.flashlight = !player.flashlight;
+      if (e.key === 'Enter' && (player.hp <= 0 || gameWon)) resetSim();
+    });
+    window.addEventListener('keyup', e => keys[e.key.toLowerCase()] = false);
+
+    let mouseX = 550, mouseY = 150;
+    canvas.addEventListener('mousemove', e => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = (e.clientX - rect.left) * (canvas.width / rect.width);
+      mouseY = (e.clientY - rect.top) * (canvas.height / rect.height);
+    });
+    canvas.addEventListener('mousedown', () => tryAttackMonsters());
+
+    const weapons = [
+      { name: "Hunter's Axe [1]", dmg: 550, range: 64 },
+      { name: "Survival Knife [2]", dmg: 400, range: 52 },
+      { name: "Hunting Spear [3]", dmg: 650, range: 82 },
+      { name: "Medieval Battle Axe [4]", dmg: 850, range: 68 }
+    ];
+
+    let player, totems, monsters, portal, hitBorderTimer = 0, swingTimer = 0, gameWon = false;
+
+    function resetSim() {
+      gameWon = false;
+      player = { x: 550, y: 220, hp: 2500, maxHp: 2500, weaponIdx: 0, flashlight: true, angle: -Math.PI/2 };
+      // Scattered across 4 corners
+      totems = [
+        { name: "NW Blacksmith", x: 140, y: 85, burned: false, charge: 0 },
+        { name: "SW Forest Cabin", x: 150, y: 365, burned: false, charge: 0 },
+        { name: "SE River Woods", x: 950, y: 355, burned: false, charge: 0 },
+        { name: "NE Deep Woods", x: 940, y: 85, burned: false, charge: 0 }
+      ];
+      monsters = [
+        { name: "CURSED PRIEST (BOSS)", x: 320, y: 150, hp: 3000, maxHp: 3000, aggro: false, atkCd: 0 },
+        { name: "BOOK-HEAD MONSTER", x: 780, y: 140, hp: 2200, maxHp: 2200, aggro: false, atkCd: 0 },
+        { name: "SCARECROW MONSTER", x: 760, y: 310, hp: 2200, maxHp: 2200, aggro: false, atkCd: 0 },
+        { name: "ZOMBIE TITAN", x: 310, y: 310, hp: 1500, maxHp: 1500, aggro: false, atkCd: 0 }
+      ];
+      const corners = [{x: 70, y: 50}, {x: 1030, y: 50}, {x: 70, y: 390}, {x: 1030, y: 390}];
+      const pick = corners[Math.floor(Math.random() * corners.length)];
+      portal = { x: pick.x, y: pick.y, unlocked: false };
+      updateBanner();
+    }
+
+    function updateBanner() {
+      const burnedCount = totems.filter(t => t.burned).length;
+      if (gameWon) {
+        statusEl.textContent = "🏆 GAME SUCCESS! You escaped through the Hidden Forest Exit Portal!";
+        statusEl.style.color = "#2ecc71";
+      } else if (burnedCount >= 4) {
+        portal.unlocked = true;
+        const d = Math.round(Math.hypot(portal.x - player.x, portal.y - player.y) / 10);
+        const temp = d > 35 ? "❄ COLD" : (d > 18 ? "♨ WARM" : "🔥 HOT - VERY CLOSE!");
+        statusEl.textContent = `★ PORTAL UNLOCKED! Radar Signal: ${temp} (${d}m) — Search the Deep Forest Corners!`;
+        statusEl.style.color = "#2ecc71";
+      } else {
+        statusEl.textContent = `CURSED RITUAL • TOTEMS BURNED: ${burnedCount} / 4 (Approach & HOLD [R] for 2s to Burn)`;
+        statusEl.style.color = "#f5b942";
+      }
+    }
+
+    function tryAttackMonsters() {
+      if (player.hp <= 0 || gameWon) return;
+      swingTimer = 0.22;
+      const w = weapons[player.weaponIdx];
+      const allBurned = totems.every(t => t.burned);
+
+      for (const m of monsters) {
+        if (m.hp > 0 && Math.hypot(m.x - player.x, m.y - player.y) <= w.range + 14) {
+          m.hp = Math.max(0, m.hp - (allBurned ? w.dmg * 2.5 : w.dmg));
+          m.aggro = true;
+        }
+      }
+    }
+
+    resetSim();
+
+    let lastTime = performance.now();
+    function loop(now) {
+      const dt = Math.min(0.05, (now - lastTime) / 1000);
+      lastTime = now;
+
+      if (player.hp > 0 && !gameWon) {
+        let dx = 0, dy = 0;
+        if (keys['w'] || keys['arrowup']) dy -= 1;
+        if (keys['s'] || keys['arrowdown']) dy += 1;
+        if (keys['a'] || keys['arrowleft']) dx -= 1;
+        if (keys['d'] || keys['arrowright']) dx += 1;
+        if (dx !== 0 || dy !== 0) {
+          const len = Math.hypot(dx, dy);
+          player.x = Math.max(24, Math.min(canvas.width - 24, player.x + (dx / len) * 165 * dt));
+          player.y = Math.max(24, Math.min(canvas.height - 24, player.y + (dy / len) * 165 * dt));
+        }
+        player.angle = Math.atan2(mouseY - player.y, mouseX - player.x);
+
+        // Long-Press [R] (2.0s) to charge & burn nearby Cursed Totem
+        for (const t of totems) {
+          if (t.burned) continue;
+          const dist = Math.hypot(t.x - player.x, t.y - player.y);
+          if (dist <= 65 && keys['r']) {
+            t.charge += dt / 2.0;
+            if (t.charge >= 1) {
+              t.charge = 1;
+              t.burned = true;
+              updateBanner();
+            }
+          } else {
+            t.charge = Math.max(0, t.charge - dt * 1.5);
+          }
+        }
+
+        if (portal.unlocked) {
+          updateBanner();
+          if (Math.hypot(portal.x - player.x, portal.y - player.y) <= 28) {
+            gameWon = true;
+            updateBanner();
+          }
+        }
+      }
+
+      if (swingTimer > 0) swingTimer -= dt;
+      if (hitBorderTimer > 0) hitBorderTimer -= dt;
+
+      // Zombies: spot you, give a 2.5s warning, then charge
+      for (const m of monsters) {
+        if (m.hp <= 0 || player.hp <= 0 || gameWon) continue;
+        const dist = Math.hypot(player.x - m.x, player.y - m.y);
+        if (dist > 230) {
+          m.aggro = false;
+          m.warn = 0;
+        } else if (!m.aggro) {
+          m.warn = (m.warn || 0) + dt;
+          if (m.warn >= 2.5) m.aggro = true;
+        }
+
+        if (m.aggro) {
+          if (dist > 22) {
+            const ang = Math.atan2(player.y - m.y, player.x - m.x);
+            m.x += Math.cos(ang) * 96 * dt;
+            m.y += Math.sin(ang) * 96 * dt;
+            m.atkCd = Math.max(m.atkCd, 0.7);
+          } else {
+            m.atkCd -= dt;
+            if (m.atkCd <= 0) {
+              m.atkCd = 1.2;
+              player.hp = Math.max(0, player.hp - 120);
+              hitBorderTimer = 0.22;
+            }
+          }
+        }
+      }
+
+      // Render
+      ctx.fillStyle = '#05070b';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Wide Flashlight Cone (88 degrees)
+      if (player.flashlight && player.hp > 0) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(player.x, player.y);
+        ctx.arc(player.x, player.y, 260, player.angle - 0.76, player.angle + 0.76);
+        ctx.closePath();
+        const grad = ctx.createRadialGradient(player.x, player.y, 10, player.x, player.y, 260);
+        grad.addColorStop(0, 'rgba(255, 248, 225, 0.28)');
+        grad.addColorStop(1, 'rgba(255, 248, 225, 0.0)');
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Draw Hidden Exit Portal ONLY when unlocked and player is close (<= 160px)
+      if (portal.unlocked) {
+        const pDist = Math.hypot(portal.x - player.x, portal.y - player.y);
+        if (pDist <= 165) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(portal.x, portal.y, 20, 0, Math.PI * 2);
+          ctx.fillStyle = '#2ecc71';
+          ctx.shadowColor = '#2ecc71';
+          ctx.shadowBlur = 25;
+          ctx.fill();
+          ctx.restore();
+
+          ctx.fillStyle = '#4dff88';
+          ctx.font = 'bold 12px Segoe UI';
+          ctx.textAlign = 'center';
+          ctx.fillText('★ EXIT PORTAL (WALK IN)', portal.x, portal.y - 26);
+        }
+      }
+
+      // Draw Totems (UI only visible when close <= 95px!)
+      for (const t of totems) {
+        const dist = Math.hypot(t.x - player.x, t.y - player.y);
+        const shake = (!t.burned && t.charge > 0) ? (Math.random() - 0.5) * 6 : 0;
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(t.x + shake, t.y, 15, 0, Math.PI * 2);
+        ctx.fillStyle = t.burned ? '#ff8c1a' : '#e62e2e';
+        ctx.shadowColor = t.burned ? '#ff8c1a' : '#ff2222';
+        ctx.shadowBlur = 18;
+        ctx.fill();
+        ctx.restore();
+
+        // Only show Totem label & charging bar when close (dist <= 95px)
+        if (dist <= 95) {
+          ctx.fillStyle = t.burned ? '#ffb347' : '#ff6b6b';
+          ctx.font = 'bold 12px Segoe UI';
+          ctx.textAlign = 'center';
+          ctx.fillText(t.burned ? `✓ ${t.name} (BURNED)` : `♦ ${t.name} [HOLD R]`, t.x, t.y - 28);
+
+          if (!t.burned && t.charge > 0) {
+            ctx.fillStyle = '#1f0606';
+            ctx.fillRect(t.x - 45, t.y - 22, 90, 7);
+            ctx.fillStyle = '#f5b942';
+            ctx.fillRect(t.x - 45, t.y - 22, 90 * t.charge, 7);
+          }
+        }
+      }
+
+      // Draw Monsters (HP Bar ONLY visible when close <= 105px!)
+      for (const m of monsters) {
+        const dist = Math.hypot(m.x - player.x, m.y - player.y);
+        if (m.hp <= 0) {
+          ctx.fillStyle = 'rgba(120, 30, 30, 0.5)';
+          ctx.beginPath();
+          ctx.arc(m.x, m.y, 11, 0, Math.PI * 2);
+          ctx.fill();
+          continue;
+        }
+        ctx.fillStyle = m.aggro ? '#ff3b3b' : (m.warn > 0 ? '#f5b942' : '#7d8597');
+        ctx.beginPath();
+        ctx.arc(m.x, m.y, 12, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (!m.aggro && m.warn > 0 && dist <= 230) {
+          ctx.fillStyle = '#f5b942';
+          ctx.font = 'bold 11px Segoe UI';
+          ctx.textAlign = 'center';
+          ctx.fillText(`⚠ ATTACKING IN ${Math.max(0, 2.5 - m.warn).toFixed(1)}s`, m.x, m.y - 46);
+        }
+
+        if (dist <= 105) {
+          const bw = 96, bh = 10;
+          ctx.fillStyle = '#1a0505';
+          ctx.fillRect(m.x - bw/2, m.y - 28, bw, bh);
+          ctx.fillStyle = '#e62e2e';
+          ctx.fillRect(m.x - bw/2, m.y - 28, bw * (m.hp / m.maxHp), bh);
+
+          ctx.fillStyle = '#fff';
+          ctx.font = 'bold 10px Segoe UI';
+          ctx.textAlign = 'center';
+          ctx.fillText(m.name, m.x, m.y - 33);
+        }
+      }
+
+      // Draw Player & Weapon Swing
+      ctx.save();
+      ctx.translate(player.x, player.y);
+      ctx.rotate(player.angle);
+      if (swingTimer > 0) {
+        ctx.strokeStyle = '#f5b942';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(0, 0, weapons[player.weaponIdx].range, -0.7, 0.7);
+        ctx.stroke();
+      }
+      ctx.fillStyle = '#38b6ff';
+      ctx.beginPath();
+      ctx.arc(0, 0, 12, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+
+      if (hitBorderTimer > 0) {
+        ctx.strokeStyle = 'rgba(200, 20, 20, 0.24)';
+        ctx.lineWidth = 14;
+        ctx.strokeRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Bottom-Left Player Health Bar & Equipped Weapon HUD
+      ctx.fillStyle = 'rgba(10, 12, 18, 0.92)';
+      ctx.fillRect(24, canvas.height - 78, 265, 64);
+      ctx.fillStyle = '#2a0808';
+      ctx.fillRect(32, canvas.height - 54, 248, 20);
+      const hpRatio = player.hp / player.maxHp;
+      ctx.fillStyle = hpRatio > 0.5 ? '#2ecc71' : (hpRatio > 0.25 ? '#f5b942' : '#e62e2e');
+      ctx.fillRect(32, canvas.height - 54, 248 * hpRatio, 20);
+
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.textAlign = 'left';
+      ctx.fillText(player.hp <= 0 ? '💀 DEAD — PRESS [ENTER] TO RESPAWN' : '🛡 PLAYER TITAN LIFE (AUTO-REGEN)', 32, canvas.height - 60);
+      ctx.fillText(`♥ HP: ${Math.ceil(player.hp)} / ${player.maxHp}`, 95, canvas.height - 40);
+      ctx.fillStyle = '#f5b942';
+      ctx.fillText(`⚔ WEAPON: ${weapons[player.weaponIdx].name}`, 32, canvas.height - 20);
+
+      if (gameWon) {
+        ctx.fillStyle = 'rgba(3, 18, 8, 0.88)';
+        ctx.fillRect(canvas.width/2 - 240, canvas.height/2 - 70, 480, 140);
+        ctx.strokeStyle = '#2ecc71';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(canvas.width/2 - 240, canvas.height/2 - 70, 480, 140);
+        ctx.fillStyle = '#2ecc71';
+        ctx.font = 'bold 28px Segoe UI';
+        ctx.textAlign = 'center';
+        ctx.fillText('🏆 GAME SUCCESS! 🏆', canvas.width/2, canvas.height/2 - 20);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 15px Segoe UI';
+        ctx.fillText('You escaped through the Hidden Forest Exit Portal!', canvas.width/2, canvas.height/2 + 15);
+        ctx.fillStyle = '#f5b942';
+        ctx.fillText('Click Reset Demo or Press [ENTER] to Play Again', canvas.width/2, canvas.height/2 + 45);
+      }
+
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  </script>
+</body>
+</html>
